@@ -1,0 +1,53 @@
+#+TITLE: macOS Better Defaults
+#+AUTHOR: Adam Schwartz
+#+DATE: October 11, 2022
+#+OPTIONS: ':true *:true toc:nil num:nil ^:nil
+
+* Move Windows by Clicking Anywhere
+On Linux, you can drag windows around by clicking anywhere if you hold
+the ~alt~ key. You can also resize windows in any direction the
+same way by using the right mouse button. This is a really great feature.
+
+On macOS, you can enable window dragging by holding down the ~Control+Command~ keys.
+#+begin_src text
+defaults write -g NSWindowShouldDragOnGesture -bool true
+#+end_src
+
+* Better Emacs Keybindings
+By default, macOS supports basic navigation keybindings from readline/Emacs.
+However, you can enable even more by using a custom ~DefaultKeyBinding.dict~ file.
+
+#+begin_src text
+mkdir -p ~/Library/KeyBindings
+cp DefaultKeyBinding.dict ~/Library/KeyBindings/DefaultKeyBinding.dict
+#+end_src
+
+- [[file:DefaultKeyBinding.dict]]
+- https://developer.apple.com/library/archive/documentation/Cocoa/Conceptual/EventOverview/TextDefaultsBindings/TextDefaultsBindings.html
+
+* Fix Finder
+Open Finder preferences:
+1. Tell Finder to open new windows to ~$HOME~
+2. Get rid of all the tags
+3. Add ~$HOME~ to the sidebar
+4. Always show filename extensions
+5. When performing a search, always search the current folder
+
+Open Finder view options:
+1. Decrease icon size
+2. Show item info
+3. Show icon preview
+
+Right-click on the Downloads folder in the dock.
+1. View content as list
+2. Display as folder
+
+* Miscellaneous System Preferences
+** Accessibility
+1. Enable zoom with gestures using the ~Control~ key.
+2. Enable three-finger-drag if applicable.
+
+* Terminal
+Remove the horrible terminal profiles (except Default).
+- [[file:Acme.terminal]]
+- [[file:urxvt.terminal]]
