@@ -47,6 +47,11 @@ Right-click on the Downloads folder in the dock.
 1. Enable zoom with gestures using the ~Control~ key.
 2. Enable three-finger-drag if applicable.
 
+** Mission Control
+1. Un-check Automatically rearrange Spaces
+2. Un-check When switching to an application, switch to a Space with open windows for the application
+3. Un-check Group windows by application
+
 * Terminal
 Remove the horrible terminal profiles (except Default).
 - [[file:Acme.terminal]]
